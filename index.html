@@ -1,162 +1,660 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio académico de Santiago Manjarres. Proyectos de desarrollo web con HTML, CSS y Git.">
-    <title>Mi portafolio | Santiago Manjarres</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <meta name="description"
+        content="Portafolio académico de Santiago Manjarres. Tecnología, desarrollo de software, sistemas y formación jurídica.">
+
+    <meta name="author" content="Santiago Manjarres">
+
+    <title>Santiago Manjarres | Tecnología & Derecho</title>
+
+    <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body>
-    <header class="header" id="inicio">
-        <nav class="nav" aria-label="Navegación principal">
-            <a class="logo" href="#inicio">Mi portafolio</a>
-            <ul class="nav-links">
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+
+<body class="bg-[#FFF8ED] text-[#14251D] antialiased">
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+    <header id="inicio" class="overflow-hidden border-b border-[#14251D]/10">
+
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10"
+            aria-label="Navegación principal">
+
+            <a href="#inicio"
+                class="text-2xl font-bold tracking-tight">
+                SM<span class="text-[#E6501B]">.</span>
+            </a>
+
+            <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+                <li>
+                    <a href="#sobre-mi" class="transition-colors hover:text-[#E6501B]">
+                        Sobre mí
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#areas" class="transition-colors hover:text-[#E6501B]">
+                        Áreas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#proyectos" class="transition-colors hover:text-[#E6501B]">
+                        Proyectos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experiencia" class="transition-colors hover:text-[#E6501B]">
+                        Trayectoria
+                    </a>
+                </li>
             </ul>
+
+            <a href="#proyectos"
+                class="rounded-full border border-[#14251D]/20 px-5 py-2.5 text-sm font-semibold transition hover:bg-[#14251D] hover:text-white">
+                Mi trabajo ↗
+            </a>
+
         </nav>
 
-        <div class="hero container">
-            <p class="eyebrow">PORTAFOLIO DE DESARROLLO WEB</p>
-            <h1>Hola, soy <span>Santiago Manjarres</span>.</h1>
-            <p class="hero-text">
-                Estoy aprendiendo a construir sitios web accesibles,
-                organizados y funcionales utilizando HTML y CSS.
-            </p>
-            <a class="button" href="#proyectos">Conocer mis proyectos</a>
-        </div>
-    </header>
 
-    <main>
-        <section class="section container" id="sobre-mi">
-            <p class="eyebrow">PRESENTACIÓN</p>
-            <h2>Acerca de mí</h2>
-            <p>
-                Esta presentación es ficticia y fue creada para una actividad
-                académica. Me interesa el desarrollo web, la tecnología y la
-                creación de soluciones digitales. Busco fortalecer mis
-                habilidades en HTML, CSS, accesibilidad y control de versiones,
-                prestando atención a la claridad del código y a la experiencia
-                de las personas que utilizan mis proyectos.
-            </p>
-            <p class="notice">
-                Nota: la presentación profesional de esta sección es ficticia.
-            </p>
-        </section>
+        <!-- ==========================================
+             HERO / PRESENTACIÓN
+        =========================================== -->
+        <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 py-24 md:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-32">
 
-        <section class="section section-alt" id="experiencia">
-            <div class="container">
-                <p class="eyebrow">TRAYECTORIA</p>
-                <h2>Experiencia profesional</h2>
-                <p class="notice">
-                    Experiencia simulada para una actividad académica.
-                    No corresponde a un empleo real.
+            <!-- Presentación -->
+            <div>
+
+                <div class="mb-8 flex items-center gap-3">
+                    <span class="h-px w-10 bg-[#E6501B]"></span>
+
+                    <p class="text-xs font-bold uppercase tracking-[0.25em] text-[#E6501B]">
+                        Portafolio personal · 2026
+                    </p>
+                </div>
+
+                <h1 class="text-6xl font-semibold leading-[0.95] tracking-[-0.06em] sm:text-7xl lg:text-8xl">
+                    Santiago
+                    <span class="block text-[#E6501B]">
+                        Manjarres.
+                    </span>
+                </h1>
+
+                <h2 class="mt-8 max-w-xl text-xl font-medium leading-relaxed sm:text-2xl">
+                    Tecnología para construir.
+                    <span class="text-[#E6501B]">
+                        Derecho para comprender.
+                    </span>
+                </h2>
+
+                <p class="mt-5 max-w-lg text-base leading-8 text-[#14251D]/65">
+                    Soy estudiante de Sistemas y Derecho. Me interesa explorar
+                    cómo la tecnología transforma nuestra sociedad y cómo el
+                    conocimiento jurídico puede orientar ese cambio.
                 </p>
 
-                <article class="experience-card">
-                    <p class="date">2025–2026 · Período ficticio</p>
-                    <h3>Desarrollador web junior</h3>
-                    <p class="company">Nexo Digital · Empresa ficticia</p>
-                    <p>
-                        Participé en el diseño de páginas web informativas,
-                        la organización de contenido con HTML semántico y la
-                        adaptación de interfaces con CSS. También practiqué
-                        el uso de Git para registrar cambios y mantener un
-                        historial ordenado del desarrollo.
-                    </p>
-                </article>
+                <div class="mt-10 flex flex-wrap items-center gap-5">
+
+                    <a href="#proyectos"
+                        class="group inline-flex items-center gap-3 rounded-full bg-[#14251D] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#E6501B]">
+
+                        Explorar proyectos
+
+                        <span class="transition-transform group-hover:translate-x-1">
+                            →
+                        </span>
+
+                    </a>
+
+                    <a href="#sobre-mi"
+                        class="text-sm font-semibold underline decoration-[#E6501B] underline-offset-8 transition hover:text-[#E6501B]">
+                        Sobre mí
+                    </a>
+
+                </div>
+
+                <p class="mt-16 text-xs font-medium uppercase tracking-[0.2em] text-[#14251D]/40">
+                    Medellín, Colombia · Tecnología & Derecho
+                </p>
+
             </div>
+
+
+            <!-- Composición por capas -->
+            <aside class="relative mx-auto w-full max-w-md">
+
+                <div class="absolute -right-4 -top-5 h-32 w-32 rounded-full bg-[#E6501B]/15 blur-2xl">
+                </div>
+
+                <div class="relative rounded-[2rem] bg-[#D4E6C8] p-5 sm:p-7">
+
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold tracking-widest text-[#14251D]/60">
+                            DOS DISCIPLINAS
+                        </span>
+
+                        <span class="text-xs text-[#14251D]/40">
+                            01 — 02
+                        </span>
+                    </div>
+
+                    <div class="mt-8 rounded-2xl bg-[#14251D] p-7 text-[#FFF8ED]">
+
+                        <span class="text-xs font-semibold tracking-widest text-[#8CCBAA]">
+                            01 / SISTEMAS
+                        </span>
+
+                        <p class="mt-5 text-3xl font-semibold tracking-tight">
+                            Lógica<span class="text-[#E6501B]">.</span>
+                        </p>
+
+                        <p class="mt-2 text-sm text-white/60">
+                            Código, estructuras y soluciones digitales.
+                        </p>
+
+                    </div>
+
+                    <div class="relative -mt-3 ml-8 rounded-2xl bg-[#FFF8ED] p-7 shadow-xl">
+
+                        <span class="text-xs font-semibold tracking-widest text-[#E6501B]">
+                            02 / DERECHO
+                        </span>
+
+                        <p class="mt-5 text-3xl font-semibold tracking-tight">
+                            Justicia<span class="text-[#E6501B]">.</span>
+                        </p>
+
+                        <p class="mt-2 text-sm text-[#14251D]/60">
+                            Normas, garantías y pensamiento jurídico.
+                        </p>
+
+                    </div>
+
+                    <div class="mt-7 flex items-center justify-between">
+                        <span class="text-xs text-[#14251D]/50">
+                            Una mirada interdisciplinaria
+                        </span>
+
+                        <span class="text-xl font-semibold text-[#E6501B]">
+                            SM.
+                        </span>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==========================================
+             SOBRE MÍ
+        =========================================== -->
+        <section id="sobre-mi"
+            class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+
+            <div class="grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
+
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#E6501B]">
+                        01 / Presentación
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                        Acerca de mí
+                    </h2>
+                </div>
+
+                <div class="max-w-3xl">
+
+                    <p class="text-xl leading-9 text-[#14251D]/80">
+                        Me interesa comprender los problemas desde distintas
+                        perspectivas. La tecnología me permite construir
+                        soluciones; el derecho me proporciona herramientas
+                        para analizar sus implicaciones sociales y jurídicas.
+                    </p>
+
+                    <p class="mt-6 leading-8 text-[#14251D]/65">
+                        Actualmente desarrollo mis conocimientos en programación,
+                        sistemas informáticos e investigación jurídica. Busco
+                        fortalecer mis habilidades técnicas y académicas mediante
+                        proyectos que conecten ambas disciplinas.
+                    </p>
+
+                    <div class="mt-8 rounded-2xl border-l-4 border-[#E6501B] bg-[#D4E6C8]/50 p-5">
+
+                        <p class="text-sm leading-7 text-[#14251D]/75">
+                            Este portafolio reúne proyectos académicos,
+                            ejercicios de desarrollo y trabajos de investigación.
+                            Las experiencias simuladas se identifican expresamente
+                            como tales.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section class="section container" id="proyectos">
-            <p class="eyebrow">TRABAJO ACADÉMICO</p>
-            <h2>Mis proyectos</h2>
-            <p class="section-intro">
-                Proyectos académicos de desarrollo web. Las experiencias
-                ficticias se identifican como tales.
+
+        <!-- ==========================================
+             ÁREAS DE INTERÉS
+        =========================================== -->
+        <section id="areas"
+            class="bg-[#F1F0E8] py-24">
+
+            <div class="mx-auto max-w-7xl px-6 lg:px-10">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#E6501B]">
+                    02 / Exploración profesional
+                </p>
+
+                <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                    Áreas de interés
+                </h2>
+
+                <p class="mt-5 max-w-2xl leading-8 text-[#14251D]/65">
+                    Dos campos de formación que permiten explorar problemas
+                    contemporáneos desde perspectivas complementarias.
+                </p>
+
+
+                <div class="mt-12 grid gap-6 md:grid-cols-2">
+
+                    <!-- Tecnología -->
+                    <article
+                        class="rounded-3xl border border-[#14251D]/10 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+                        <span class="text-sm font-semibold text-[#E6501B]">
+                            01
+                        </span>
+
+                        <h3 class="mt-5 text-2xl font-semibold">
+                            Tecnología
+                        </h3>
+
+                        <p class="mt-4 leading-7 text-[#14251D]/70">
+                            Desarrollo de software, programación web,
+                            sistemas informáticos y seguridad digital.
+                        </p>
+
+                        <div class="mt-7 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-[#D4E6C8] px-3 py-1.5 text-xs font-medium">
+                                Desarrollo web
+                            </span>
+
+                            <span class="rounded-full bg-[#D4E6C8] px-3 py-1.5 text-xs font-medium">
+                                Sistemas
+                            </span>
+
+                            <span class="rounded-full bg-[#D4E6C8] px-3 py-1.5 text-xs font-medium">
+                                Ciberseguridad
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Derecho -->
+                    <article
+                        class="rounded-3xl border border-[#14251D]/10 bg-[#D4E6C8] p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+                        <span class="text-sm font-semibold text-[#E6501B]">
+                            02
+                        </span>
+
+                        <h3 class="mt-5 text-2xl font-semibold">
+                            Derecho
+                        </h3>
+
+                        <p class="mt-4 leading-7 text-[#14251D]/70">
+                            Formación jurídica, investigación, derecho penal,
+                            garantías procesales y análisis normativo.
+                        </p>
+
+                        <div class="mt-7 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-white/70 px-3 py-1.5 text-xs font-medium">
+                                Derecho penal
+                            </span>
+
+                            <span class="rounded-full bg-white/70 px-3 py-1.5 text-xs font-medium">
+                                Debido proceso
+                            </span>
+
+                            <span class="rounded-full bg-white/70 px-3 py-1.5 text-xs font-medium">
+                                Investigación
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Intersección -->
+                <article class="mt-6 rounded-3xl bg-[#14251D] p-8 text-[#FFF8ED] sm:p-10">
+
+                    <span class="text-sm font-semibold text-[#8CCBAA]">
+                        03 / INTERSECCIÓN
+                    </span>
+
+                    <h3 class="mt-5 text-3xl font-semibold">
+                        Tecnología y sociedad.
+                    </h3>
+
+                    <p class="mt-4 max-w-2xl leading-8 text-white/65">
+                        Un espacio para explorar inteligencia artificial,
+                        evidencia digital, protección de datos, ciberseguridad
+                        y regulación de nuevas tecnologías.
+                    </p>
+
+                    <p class="mt-8 text-sm font-medium text-[#8CCBAA]">
+                        Derecho digital · IA · Evidencia digital
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAYECTORIA
+        =========================================== -->
+        <section id="experiencia"
+            class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#E6501B]">
+                03 / Trayectoria
             </p>
 
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-placeholder">
-                        <span>Captura pendiente</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Rueda Libre</h3>
-                        <p>
-                            Sitio web académico para un servicio de alquiler
-                            de bicicletas y recorridos guiados en Medellín.
-                            Incluye páginas de inicio, tarifas y rutas, y reservas.
-                        </p>
-                        <a class="button"
-                           href="https://c4smo.github.io/rueda_libre/"
-                           target="_blank"
-                           rel="noopener noreferrer">Ver en vivo</a>
-                    </div>
-                </article>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                Formación y experiencia
+            </h2>
 
-                <article class="project-card">
-                    <div class="project-placeholder">
-                        <span>Captura pendiente</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Hoja de vida</h3>
-                        <p>
-                            Proyecto académico para practicar la estructura
-                            semántica de HTML y la presentación de información
-                            mediante CSS.
-                        </p>
-                        <p class="project-status">
-                            Pendiente de desarrollar y publicar.
-                        </p>
-                    </div>
-                </article>
+            <div class="mt-12 max-w-3xl">
 
-                <article class="project-card">
-                    <div class="project-placeholder">
-                        <span>Captura pendiente</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sección de Conferencistas</h3>
-                        <p>
-                            Interfaz académica para organizar perfiles de
-                            conferencistas en tarjetas con un diseño adaptable
-                            a distintos tamaños de pantalla.
-                        </p>
-                        <p class="project-status">
-                            Pendiente de desarrollar y publicar.
-                        </p>
-                    </div>
-                </article>
+                <div class="relative border-l border-[#14251D]/20 pl-8">
 
-                <article class="project-card">
-                    <div class="project-placeholder">
-                        <span>Captura pendiente</span>
+                    <div class="absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full bg-[#E6501B]">
                     </div>
-                    <div class="project-content">
-                        <h3>ParcheDev</h3>
-                        <p>
-                            Proyecto reservado para integrar una aplicación
-                            web adicional cuando confirmemos sus archivos
-                            y su estado de desarrollo.
-                        </p>
-                        <p class="project-status">
-                            Pendiente de confirmar y publicar.
-                        </p>
-                    </div>
-                </article>
+
+                    <p class="text-sm font-medium text-[#E6501B]">
+                        2025–2026 · Período ficticio
+                    </p>
+
+                    <h3 class="mt-3 text-xl font-semibold">
+                        Desarrollador web junior
+                    </h3>
+
+                    <p class="mt-2 text-sm font-medium text-[#14251D]/55">
+                        Nexo Digital · Empresa ficticia
+                    </p>
+
+                    <p class="mt-5 leading-8 text-[#14251D]/70">
+                        Experiencia simulada para una actividad académica.
+                        Participación en ejercicios de diseño de páginas web,
+                        organización de contenido mediante HTML semántico,
+                        adaptación de interfaces con CSS y control de versiones
+                        utilizando Git.
+                    </p>
+
+                    <p class="mt-5 inline-flex rounded-full bg-[#D4E6C8] px-4 py-2 text-xs font-semibold">
+                        Experiencia académica simulada
+                    </p>
+
+                </div>
+
             </div>
+
         </section>
+
+
+        <!-- ==========================================
+             PROYECTOS
+        =========================================== -->
+        <section id="proyectos"
+            class="bg-[#F1F0E8] py-24">
+
+            <div class="mx-auto max-w-7xl px-6 lg:px-10">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#E6501B]">
+                    04 / Trabajo académico
+                </p>
+
+                <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                    Proyectos seleccionados
+                </h2>
+
+                <p class="mt-5 max-w-2xl leading-8 text-[#14251D]/65">
+                    Una recopilación de ejercicios, proyectos académicos
+                    y experiencias de desarrollo.
+                </p>
+
+
+                <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+
+                    <!-- Proyecto 1 -->
+                    <article
+                        class="group overflow-hidden rounded-3xl border border-[#14251D]/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+                        <div class="flex aspect-[16/10] items-center justify-center bg-[#D4E6C8]">
+
+                            <span class="text-4xl font-bold tracking-tight text-[#14251D]">
+                                RL<span class="text-[#E6501B]">.</span>
+                            </span>
+
+                        </div>
+
+                        <div class="p-7">
+
+                            <p class="text-xs font-semibold uppercase tracking-widest text-[#E6501B]">
+                                Desarrollo web
+                            </p>
+
+                            <h3 class="mt-3 text-xl font-semibold">
+                                Rueda Libre
+                            </h3>
+
+                            <p class="mt-4 text-sm leading-7 text-[#14251D]/65">
+                                Sitio web académico para un servicio de alquiler
+                                de bicicletas y recorridos guiados en Medellín.
+                                Incluye páginas de inicio, tarifas y rutas,
+                                y reservas.
+                            </p>
+
+                            <a href="https://c4smo.github.io/rueda_libre/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mt-7 inline-flex items-center gap-2 text-sm font-semibold transition hover:text-[#E6501B]">
+
+                                Ver proyecto
+
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto 2 -->
+                    <article
+                        class="group overflow-hidden rounded-3xl border border-[#14251D]/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+                        <div class="flex aspect-[16/10] items-center justify-center bg-[#E8E2D5]">
+
+                            <span class="text-4xl font-bold tracking-tight text-[#14251D]">
+                                CV<span class="text-[#E6501B]">.</span>
+                            </span>
+
+                        </div>
+
+                        <div class="p-7">
+
+                            <p class="text-xs font-semibold uppercase tracking-widest text-[#E6501B]">
+                                HTML · CSS
+                            </p>
+
+                            <h3 class="mt-3 text-xl font-semibold">
+                                Hoja de vida
+                            </h3>
+
+                            <p class="mt-4 text-sm leading-7 text-[#14251D]/65">
+                                Proyecto académico para practicar la estructura
+                                semántica de HTML y la presentación de información
+                                mediante CSS.
+                            </p>
+
+                            <p class="mt-7 text-xs font-semibold text-[#14251D]/45">
+                                Pendiente de desarrollar y publicar.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto 3 -->
+                    <article
+                        class="group overflow-hidden rounded-3xl border border-[#14251D]/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+                        <div class="flex aspect-[16/10] items-center justify-center bg-[#DCE5E4]">
+
+                            <span class="text-4xl font-bold tracking-tight text-[#14251D]">
+                                UI<span class="text-[#E6501B]">.</span>
+                            </span>
+
+                        </div>
+
+                        <div class="p-7">
+
+                            <p class="text-xs font-semibold uppercase tracking-widest text-[#E6501B]">
+                                Diseño de interfaces
+                            </p>
+
+                            <h3 class="mt-3 text-xl font-semibold">
+                                Sección de Conferencistas
+                            </h3>
+
+                            <p class="mt-4 text-sm leading-7 text-[#14251D]/65">
+                                Interfaz académica para organizar perfiles
+                                de conferencistas en tarjetas adaptables
+                                a distintos tamaños de pantalla.
+                            </p>
+
+                            <p class="mt-7 text-xs font-semibold text-[#14251D]/45">
+                                Pendiente de desarrollar y publicar.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto 4 -->
+                    <article
+                        class="group overflow-hidden rounded-3xl border border-[#14251D]/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+                        <div class="flex aspect-[16/10] items-center justify-center bg-[#E9DCD1]">
+
+                            <span class="text-4xl font-bold tracking-tight text-[#14251D]">
+                                PD<span class="text-[#E6501B]">.</span>
+                            </span>
+
+                        </div>
+
+                        <div class="p-7">
+
+                            <p class="text-xs font-semibold uppercase tracking-widest text-[#E6501B]">
+                                Proyecto web
+                            </p>
+
+                            <h3 class="mt-3 text-xl font-semibold">
+                                ParcheDev
+                            </h3>
+
+                            <p class="mt-4 text-sm leading-7 text-[#14251D]/65">
+                                Espacio reservado para integrar una aplicación
+                                web adicional cuando confirmemos sus archivos
+                                y estado de desarrollo.
+                            </p>
+
+                            <p class="mt-7 text-xs font-semibold text-[#14251D]/45">
+                                Pendiente de confirmar y publicar.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>Portafolio académico · HTML y CSS</p>
-            <a href="#inicio">Volver al inicio ↑</a>
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+    <footer class="bg-[#14251D] py-12 text-[#FFF8ED]">
+
+        <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-6 sm:flex-row sm:items-center lg:px-10">
+
+            <div>
+
+                <a href="#inicio"
+                    class="text-2xl font-bold tracking-tight">
+                    SM<span class="text-[#E6501B]">.</span>
+                </a>
+
+                <p class="mt-3 text-sm text-white/50">
+                    Tecnología, derecho y pensamiento crítico.
+                </p>
+
+            </div>
+
+            <div class="flex flex-col gap-3 text-sm text-white/65 sm:items-end">
+
+                <p>
+                    Portafolio académico · 2026
+                </p>
+
+                <a href="#inicio"
+                    class="font-semibold text-[#8CCBAA] transition hover:text-white">
+                    Volver al inicio ↑
+                </a>
+
+            </div>
+
         </div>
+
     </footer>
+
 </body>
+
 </html>
